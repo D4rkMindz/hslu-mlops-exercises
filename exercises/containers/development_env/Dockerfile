@@ -25,7 +25,7 @@ RUN echo "c.NotebookApp.open_browser = False" >> /root/.jupyter/jupyter_notebook
 # install rest of required libraries 
 # tag sklearn because of mlflow autolog() support
 # flask is needed by mlflow when validating signatures
-RUN pip install --no-cache-dir pandas matplotlib scikit-learn mlflow-skinny \
+RUN pip install --no-cache-dir pandas matplotlib scikit-learn mlflow-skinny skops \
     pyarrow s3fs quixstreams kafka-python-ng evidently statsd loguru flask wandb hopsworks==5.0.7
 
 WORKDIR /notebooks
